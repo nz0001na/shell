@@ -1,6 +1,9 @@
 # Shell Command
 A small summary of shell command used.
 
+A website for shell command explanation: https://explainshell.com/
+
+
 # 1. To get the total number of files in the current folder using the command terminal, you can use the following command:
   bash:
   
@@ -38,7 +41,15 @@ a command line utility that allows the user to interactively monitor the systemâ
 https://www.geeksforgeeks.org/htop-command-in-linux-with-examples/
 
 
+# 3. Print System Information
 
+      uname -a
+
+Displays the name of the current operating system.
+
+https://www.ibm.com/docs/ru/aix/7.1?topic=u-uname-command
+
+# 4. 
 
 
 

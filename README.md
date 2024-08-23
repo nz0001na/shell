@@ -1,1 +1,29 @@
-# shell
+# shell command
+
+# 1. To get the total number of files in the current folder using the command terminal, you can use the following command:
+  bash:
+  
+        ls -1 | wc -l
+        
+Explanation:
+
+* ls -1: This command lists all files and directories in a single column format.
+* wc -l: This counts the number of lines in the output from the ls command, effectively giving you the total number of files and directories.
+
+Note:
+
+This command counts all files and directories, including hidden files (those starting with a dot). If you want to count only non-hidden files, you can use:
+
+bash:
+
+    ls -1A | wc -l
+    
+Here, the -A option includes hidden files but excludes the . and .. entries.
+
+If you want to count only files (excluding directories), you can use:
+
+bash:
+
+    find . -maxdepth 1 -type f | wc -l
+    
+This command uses find to look for files (-type f) in the current directory (.) without descending into subdirectories (-maxdepth 1).

@@ -94,7 +94,8 @@ bash
 These commands provide flexibility in listing files based on your requirements in the shell. If you have a specific scenario in mind, feel free to ask for more tailored commands!
 
 # unzip a file
-    $unzip filename
+    $unzip filename.zip
+    $tar -xvzf filename.tar.gz
 
 
 

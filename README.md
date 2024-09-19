@@ -96,6 +96,12 @@ These commands provide flexibility in listing files based on your requirements i
 # unzip a file
     $unzip filename.zip
     $tar -xvzf filename.tar.gz
+    
+# move files
+        $mv ~/Downloads/*.mp3 ~/Music/
+
+# download a file given a URL
+        $wget url
 
 
 

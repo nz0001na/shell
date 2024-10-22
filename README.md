@@ -3,6 +3,38 @@ A small summary of shell command used.
 
 A website for shell command explanation: https://explainshell.com/
 
+**************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Create folders
+
+To make a single folder, type the following command, replacing "FolderName" with the name you want to assign to your folder. Then, press Enter.
+
+        mkdir FolderName
+
+To create a folder that has spaces in its name, enclose the name with double quotes like this:
+
+        mkdir “Mahesh Makvana”
+
+To create a folder inside a folder is to specify the other folder right in the mkdir command itself. For example, if you have a subfolder named "Photos" and you want to create a new folder named "Personal" inside it, use the following command:
+
+        mkdir Photos\Personal
+
+To make several folders at once, add the required folder names to the mkdir command. For example, to create three separate folders named Documents, Photos, and Videos, use the following command:
+
+      mkdir Documents Photos Videos
+
 
 # To get the total number of files in the current folder using the command terminal, you can use the following command:
   bash:

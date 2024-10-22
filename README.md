@@ -104,6 +104,25 @@ These commands provide flexibility in listing files based on your requirements i
         $wget url
 
 
+# Copying directories (cp command)
+Use the cp command to create a copy of the contents of the file or directory specified by the SourceFile or SourceDirectory parameters into the file or directory specified by the TargetFile or TargetDirectory parameters.
+
+If the file specified as the TargetFile exists, the copy writes over the original contents of the file. If you are copying more than one SourceFile, the target must be a directory.
+
+To place a copy of the SourceFile into a directory, specify a path to an existing directory for the TargetDirectory parameter. Files maintain their respective names when copied to a directory unless you specify a new file name at the end of the path. The cp command also copies entire directories into other directories if you specify the -r or -R flags.
+
+The following are examples of how to use the cp command:
+To copy all the files in the /home/accounts/customers/orders directory to the /home/accounts/customers/shipments directory, type the following:
+        
+        cp /home/accounts/customers/orders/* /home/accounts/customers/shipments
+
+This copies the files, but not the directories, from the orders directory into the shipments directory.
+To copy a directory, including all its files and subdirectories, to another directory, type the following:
+
+        cp -R /home/accounts/customers /home/accounts/vendors
+
+This copies the customers directory, including all its files, subdirectories, and the files in those subdirectories, into the vendors directory.
+
 
 
 

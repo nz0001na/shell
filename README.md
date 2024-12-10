@@ -7,17 +7,53 @@ A website for shell command explanation: https://explainshell.com/
 
 
 
+## How to unzip .tar file using bash terminal command
+
+To unzip a .tar file using the bash terminal, you can use the tar command. Here's how:
+
+Basic Command to Extract a .tar File
+
+To extract the contents of a .tar file, use the following command:
+
+                tar -xvf filename.tar
+                -x: Extracts the files.
+                -v: Displays the progress in the terminal (optional).
+                -f: Specifies the file to extract.
+For example:
+
+                tar -xvf archive.tar
+This will extract all the files and directories from archive.tar into the current directory.
+
+Extracting to a Specific Directory
+
+If you want to extract the .tar file to a specific directory, use the -C option:
+                
+                tar -xvf filename.tar -C /path/to/destination
+For example:
+
+                tar -xvf archive.tar -C /home/user/documents
+
+This will extract the contents of archive.tar into /home/user/documents.
+
+Listing the Contents Without Extracting
+
+To see the contents of a .tar file without extracting it, use the -t option:
+                tar -tvf filename.tar
+
+This will display a list of files and directories inside the .tar file.
+
+Additional Notes:
+
+If the file is compressed (e.g., .tar.gz or .tar.bz2), you will need additional options to handle the compression. For example:
+
+                .tar.gz: Use tar -xzvf filename.tar.gz.
+                .tar.bz2: Use tar -xjvf filename.tar.bz2.
+                
+Always ensure you are in the correct directory or specify the full path to the .tar file when running the command.
+By following these steps, you can easily extract .tar files using the terminal!
 
 
-
-
-
-
-
-
-
-
-# Create folders
+## Create folders
 
 To make a single folder, type the following command, replacing "FolderName" with the name you want to assign to your folder. Then, press Enter.
 
@@ -36,7 +72,7 @@ To make several folders at once, add the required folder names to the mkdir comm
       mkdir Documents Photos Videos
 
 
-# To get the total number of files in the current folder using the command terminal, you can use the following command:
+## To get the total number of files in the current folder using the command terminal, you can use the following command:
   bash:
   
         ls -1 | wc -l
@@ -64,7 +100,7 @@ bash:
     
 This command uses find to look for files (-type f) in the current directory (.) without descending into subdirectories (-maxdepth 1).
 
-# Monitor the system’s vital resources or server’s processes
+## Monitor the system’s vital resources or server’s processes
 
 a command line utility that allows the user to interactively monitor the system’s vital resources or server’s processes in real time.
 
@@ -73,7 +109,7 @@ a command line utility that allows the user to interactively monitor the system�
 https://www.geeksforgeeks.org/htop-command-in-linux-with-examples/
 
 
-# Print System Information
+## Print System Information
 
       uname -a
 
@@ -81,7 +117,7 @@ Displays the name of the current operating system.
 
 https://www.ibm.com/docs/ru/aix/7.1?topic=u-uname-command
 
-# 4. How to list a part of files in a foler in shell
+## How to list a part of files in a foler in shell
 To list a part of the files in a folder using the shell, you can use various commands depending on your specific needs. Here are a few methods:
 * (1). Using ls with Wildcards
 

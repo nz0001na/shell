@@ -16,16 +16,18 @@ Run the following command in the terminal:
               for file in *.tar.gz; do tar -xzf "$file"; done
 
 Explanation:
-            for file in *.tar.gz: Loops through all files in the current directory that have the .tar.gz extension.
-            tar -xzf "$file": Extracts each .tar.gz file one by one.
-            -x: Extracts the files.
-            -z: Handles the gzip compression.
-            -f: Specifies the file to extract.
-            "$file": Ensures the file name is correctly passed to the tar command, even if it contains spaces.
+
+              for file in *.tar.gz: Loops through all files in the current directory that have the .tar.gz extension.
+              tar -xzf "$file": Extracts each .tar.gz file one by one.
+              -x: Extracts the files.
+              -z: Handles the gzip compression.
+              -f: Specifies the file to extract.
+              "$file": Ensures the file name is correctly passed to the tar command, even if it contains spaces.
 
 Extracting to a Specific Directory
 
 If you want to extract all .tar.gz files into a specific directory, you can modify the command:
+           
             for file in *.tar.gz; do tar -xzf "$file" -C /path/to/destination; done
 
 Replace /path/to/destination with the directory where you want the files to be extracted.
@@ -33,9 +35,11 @@ Replace /path/to/destination with the directory where you want the files to be e
 Alternative Using find
 
 If the .tar.gz files are located in subdirectories as well, you can use the find command:
+           
             find . -name "*.tar.gz" -exec tar -xzf {} \;
 
 Explanation:
+          
           find . -name "*.tar.gz": Searches for all .tar.gz files in the current directory and its subdirectories.
           -exec tar -xzf {}: Executes the tar command on each file found.
           \;: Ends the -exec command.

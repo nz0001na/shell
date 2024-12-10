@@ -5,6 +5,76 @@ A website for shell command explanation: https://explainshell.com/
 
 **************************************************************************************************************************
 
+## download file with url using command
+
+To download a file using a URL in the terminal, you can use either the wget or curl command. Both are widely used and available on most Unix-like systems, and they are also available for Windows.
+
+1. Using wget
+   
+The wget command is simple and efficient for downloading files.
+
+Basic Syntax:
+
+            wget <URL>
+
+Example:
+
+            wget https://example.com/file.zip
+            
+This will download the file file.zip from the specified URL and save it in the current directory.
+
+Save with a Custom Name:
+
+If you want to save the file with a specific name, use the -O option:
+
+            wget -O custom_name.zip https://example.com/file.zip
+
+2. Using curl
+
+The curl command is another powerful tool for downloading files.
+
+Basic Syntax:
+
+            curl -O <URL>
+
+Example:
+
+            curl -O https://example.com/file.zip
+
+This will download the file and save it with the same name as in the URL.
+
+Save with a Custom Name:
+
+If you want to save the file with a specific name, use the -o option:
+
+            curl -o custom_name.zip https://example.com/file.zip
+            
+3. Downloading Multiple Files
+
+If you have multiple URLs to download, you can use a loop or a file containing the URLs.
+
+Using wget:
+
+            wget -i urls.txt
+            
+Here, urls.txt is a file containing a list of URLs (one per line).
+
+Using curl:
+
+            xargs -n 1 curl -O < urls.txt
+            
+4. Notes
+   
+Install Tools: If wget or curl is not installed, you can install them using your system's package manager (e.g., sudo apt install wget or sudo apt install curl on Ubuntu).
+
+Resume Downloads: Both tools support resuming interrupted downloads:
+
+            wget -c <URL>
+            curl -C - -O <URL>
+            
+These commands make downloading files from the terminal quick and efficient!
+
+
 ## How to unzip a bunch of .tar.gz files in a same directory using command?
 
 To unzip a bunch of .tar.gz files in the same directory using a single command, you can use a for loop in the terminal. Here's how:

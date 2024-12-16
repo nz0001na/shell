@@ -10,7 +10,7 @@ A website for shell command explanation: https://explainshell.com/
 To remove a directory using Bash, you can use either the rm or rmdir command, depending on whether the directory is empty or contains files. Here's how:
 
 1. Remove an Empty Directory
-2. 
+
 To delete an empty directory, use the rmdir command:
 
                rmdir directory_name
